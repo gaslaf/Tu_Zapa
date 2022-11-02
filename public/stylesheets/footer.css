@@ -1,0 +1,26 @@
+.footer{
+    background: var(--color-four);
+}
+.footer h2{
+    color: var(--color-six);
+    font-family: var(--title-font);
+}
+.footer .contacto{
+    display: flex;
+    justify-content: center;
+}
+.footer .contacto .contacto-icono{
+    padding: 5px;
+}
+
+.footer .ir-arriba{
+    text-align: end;
+    width: 90%;
+}
+.footer h2 .logo-img{
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+}

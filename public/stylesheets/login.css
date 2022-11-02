@@ -1,0 +1,52 @@
+.login,.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.login .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 200px;
+    margin: auto;
+    align-items: center;
+}
+.login .formulario .form-cnt,.register .formulario .form-cnt{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+} 
+.login .formulario .form-cnt .input{
+    color: var(--color-four);
+    font-size: 1rem;
+    border: 0;
+    border-radius: 5px;
+    opacity: 0.9;
+    width: 100%;
+    margin: auto;
+    height: 50px;
+    font-weight: 700;
+    padding: 10px;
+}
+.login .formulario .boton-log button, .register .formulario .boton-log button{
+    padding: 10px;
+    font-size: .7rem;
+    border: 0;
+    margin: 10px;
+    background: var(--color-four);
+    color: var(--color-six);
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width : 460px){
+
+    .login .formulario .boton-log button:hover{
+        background: var(--color-six);
+        color: var(--color-four);
+    }
+    
+}
