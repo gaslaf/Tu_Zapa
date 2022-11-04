@@ -36,7 +36,7 @@
     font-size: 1rem;
     font-family: var(--tercero-font);
     text-transform: uppercase;
-    margin: 10px;
+    margin-top: 10px;
   }
   .font{
     font-family: var(--tercero-font);
@@ -56,3 +56,21 @@
   .color-blanco{
     color: var(--color-six);
 }
+.price{
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 10px;
+  font-family: var(--card-font);
+}
+.info{
+  font-size: .8rem;
+  line-height: 20px;
+  font-family: var(--card-font);
+  opacity: 0.8;
+}
+.gris{
+  opacity: .7;
+}
+.top-shadow {
+  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.16);}

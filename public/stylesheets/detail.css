@@ -1,0 +1,184 @@
+.detail{
+    max-width: 990px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.detail  .button-info{
+    padding: 5px;
+    border: 0;
+    background: var(--color-four);
+    color: var(--color-six);
+    text-transform: uppercase;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.detail .detail-stn .detail-art{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+.detail .detail-stn .detail-art .detail-product{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background: white;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.detail .detail-stn .detail-art .detail-product .cnt-principal{
+    width: 90%;
+    margin: auto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+.detail .detail-stn .detail-art .detail-product .cnt-principal .img-principal{
+    width: 100%;
+}
+.detail .detail-stn .detail-art .info-cnt{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+.detail .detail-stn .detail-art .more-cnt .detail-desc{
+    margin-bottom: 20px;
+}
+.detail .detail-stn .detail-art .more-cnt .detail-table{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.detail .detail-stn .detail-art .more-cnt{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.detail .rela-stn .rela-art .product{
+    width: 45%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: white;
+    margin: 10px auto;
+}
+.detail .rela-stn .rela-art .product .img-product .img-uno{
+    width: 100%;
+}
+.detail .rela-stn .rela-art .product .img-product{
+    position: relative;
+    padding: 5px;
+}
+.detail .rela-stn .rela-art .product .img-product .precio{
+    position: absolute;
+    bottom: 10%;
+    left: 7%;
+    font-size: 0.80rem;
+}
+.detail .rela-stn .rela-art .product .img-product .img-logo{
+    width: 40px;
+    position: absolute;
+    top: 1%;
+    right: 5%;
+}
+.detail .rela-stn .rela-art{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+.detail .rela-stn .rela-art h2{
+    width : 100%
+}
+.detail .rela-stn .rela-art .product .info-cnt{
+    width: 100%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+.detail .rela-stn .rela-art .product .info-cnt .button{
+    padding: 5px;
+    border: 1px solid lightgray;    
+    border-radius: 5px;
+    font-size: 0.7rem;   
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    background: var(--color-one);
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 5px;
+}
+@media (min-width: 330px){
+    .detail .detail-stn .detail-art{
+        flex-wrap: nowrap;
+    }
+    .detail .detail-stn .detail-art .more-cnt .detail-table{
+        display: flex;
+    }
+    .detail .detail-stn .detail-art .more-cnt .detail-table .list-cnt{
+        width: 70vw;    
+    }
+    .detail .tabla{
+        display: flex;
+        justify-content: space-between;
+      }
+}
+
+@media (min-width: 460px){
+    .detail .detail-stn .detail-art .more-cnt .detail-table .list-cnt{
+        width: 40vw;
+    }
+    .detail .rela-stn .rela-art .product{
+        width: 20%;
+    }
+    .detail .button-info{
+        padding: 10px;
+        transition: .5s;
+    }
+    .detail .button-info:hover{
+        opacity: .8;
+        transform: scale(1.1);
+    }
+    .info:hover{
+        color: red;
+    }
+    .price:hover{
+        opacity: .7;
+    }
+    .detail .tabla{
+        transition: .5s;
+    }
+    .detail .tabla:hover{
+        color: var(--color-two);
+        transform: scale(1.1);
+    }
+    .detail .rela-stn .rela-art .product{
+        transition: .5s;
+    }
+    .detail .rela-stn .rela-art .product:hover{
+        transform: scale(1.034);
+    }
+}
+
+@media (min-width: 768px){
+    .price{
+        font-size: 2rem;
+    }
+    .info{
+        font-size: 1.3rem;
+    }
+}
