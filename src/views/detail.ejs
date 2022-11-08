@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-    <%- include('./partials/head') %> 
+    <%- include('./partials/head',{title: producto.nombre}) %> 
 
 <body>
     <%- include('./partials/header') %>
@@ -12,7 +12,7 @@
         <div class="detail-product">
 
             <div class="cnt-principal">
-                <a href=""><img class="img-principal" src="/images/zapas/AD_GW4113-1.jpg" alt=""></a>
+                <a href=""><img class="img-principal" src="/images/zapas/<%= producto.imagenUno %> " alt=""></a>
             </div>
             <div class="cnt-secundarios">
                 <input type="radio" name="position" class="carrousel" checked>
@@ -35,18 +35,20 @@
 -->
             </div>
             <div class="info-cnt">
-                <h2 class="price t-a-center">Adidas Go Walk</h2>
-                <p class="price t-a-center">$10.079</p>
-                <p class="info t-a-center">Descuento de $4.320(30%)</p>
-                <p class="info t-a-center">6 cuotas sin interés de $3.360 </p>
+                <h2 class="price t-a-center"><%= producto.marca  %> <%= producto.nombre%> </h2>
+                <p class="price t-a-center">$<%= producto.precio %> </p>
+                <p class="info t-a-center"><% if (producto.descuento > 0) { %>
+                <%- descuento(producto.precio,producto.descuento)%> 
+                (<%=producto.descuento%>% de descuento)   </p>
+                <% } %>
+                 
+                <p class="info t-a-center"> 6 cuotas de <%- cuotas(producto.precio) %> sin interes  </p>
                 <select class="button-info" name="" id="">
-                    <option value="">37</option>
-                    <option value="">38</option>
-                    <option value="">39</option>
-                    <option value="">40</option>
-                    <option value="">41</option>
-                    <option value="">42</option>
-                    <option value="">43</option>
+                  <% producto.talle.forEach(talle => { %>
+                   
+                  
+                    <option value=""><%= talle  %> </option>
+                  <% }) %>
                 </select>
                 <button class="button-info">agregar al carrito</button>
             </div>
@@ -58,10 +60,10 @@
         <div class="more-cnt">
 
             <div class="detail-desc">
-                <h2 class="t-a-center title">descripcion</h3>
+                <h2 class="t-a-center title">Descripcion </h3>
                 <p class="t-a-center">
 
-                    Las Zapatillas adidas Duramo 10 presentan un diseño moderno y urbano, ideal para los runners que aman la moda. Su exterior de malla aporta transpirabilidad y resistencia, mientras que la suela de caucho aporta tracción en diversas superficies. La amortiguación LIGHTMOTION mejora tus pasos y te brinda la comodidad que necesitas para superar todas tus marcas.
+                  <%= producto.descripcion %>
                     </p>
             </div>
 
@@ -69,12 +71,12 @@
             <div class="detail-table">
                 <h2 class="t-a-center title">especificaciones</h2>
                 <ul class="list-cnt">
-                    <li class="tabla"> <span>Género:</span>   <p class="gris">Mujer</p></li>
-                    <li class="tabla"> <span>Talles:</span>  <p class="gris">36,37,38,40</p></li>
-                    <li class="tabla"> <span>Marca:</span>  <p class="gris"> Nike</p></li>
-                    <li class="tabla"> <span>Origen:</span>  <p class="gris">Nacional</p></li>
-                    <li class="tabla"> <span>Color:</span>  <p class="gris">Blanco</p></li>
-                    <li class="tabla"> <span>Ajuste:</span>  <p class="gris">Cordones</p></li>
+                    <li class="tabla"> <span>Género:</span>   <p class="gris"><%= producto.genero %> </p></li>
+                    <li class="tabla"> <span>Talles:</span>  <p class="gris"><%= producto.talle %> </p></li>
+                    <li class="tabla"> <span>Marca:</span>  <p class="gris"><%= producto.marca %>  </p></li>
+                    <li class="tabla"> <span>Origen:</span>  <p class="gris"><%= producto.origen %> </p></li>
+                    <li class="tabla"> <span>Color:</span>  <p class="gris"><%= producto.color  %>  </p> </li>
+                    <li class="tabla"> <span>Ajuste:</span>  <p class="gris"><%= producto.ajuste %> </p></li>
                 </ul>
                
             </div>
@@ -86,78 +88,29 @@
    </section>
    <section class="rela-stn">
     <article class="rela-art">
-    <h2 class="title t-a-center">Relacionados</h2>
+    <h2 class="title t-a-center">Relacionados <%= producto.marca  %>  </h2>
+
+    <% aleatorios(nuevoArray(producto.marca),4).forEach(aleatorio => { %>
 <div class="product">
+
+   
+  
     <div class="img-product">
       <a href="">
-        <img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-        <img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
+        <img class="img-prdt img-uno" src="/images/zapas/<%= aleatorio.imagenUno  %> " alt="">
+        <img class="img-prdt img-dos" src="/images/zapas/<%= aleatorio.imagenDos  %>" alt="">
   
-          <p class="precio">$ 1.599</p>
+          <p class="precio">$ <%= aleatorio.precio %> </p>
         <img class="img-logo" src="/images/logos/adidas.png" alt="">
       </a>
       </div>
       
   <div class="info-cnt">
-    <p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-    <button class="button">ver mas</button>
+    <p class="nombre-prdt t-a-center"><%= aleatorio.marca %> <%= aleatorio.nombre  %> </p>
+    <a href="/products/detail/<%= aleatorio.id %> "><button class="button">ver mas</button></a>
   </div>
-    </div>
-
-
-      <div class="product">
-        <div class="img-product">
-          <a href="">
-            <img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-            <img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-      
-              <p class="precio">$ 1.599</p>
-            <img class="img-logo" src="/images/logos/adidas.png" alt="">
-          </a>
-          </div>
-
-          
-  <div class="info-cnt">
-    <p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-    <button class="button">ver mas</button>
-  </div>
-        </div>
-
-
-          <div class="product">
-            <div class="img-product">
-              <a href="">
-                <img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-                <img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-          
-                  <p class="precio">$ 1.599</p>
-                <img class="img-logo" src="/images/logos/adidas.png" alt="">
-              </a>
-              </div>
-              
-  <div class="info-cnt">
-    <p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-    <button class="button">ver mas</button>
-  </div>
-            </div>
-
-
-              <div class="product">
-                <div class="img-product">
-                  <a href="">
-                    <img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-                    <img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-              
-                      <p class="precio">$ 1.599</p>
-                    <img class="img-logo" src="/images/logos/adidas.png" alt="">
-                  </a>
-                  </div>
-                  
-  <div class="info-cnt">
-    <p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-    <button class="button">ver mas</button>
-  </div>
-                </div>
+    </div><% }) %>
+    
     </article>
    </section>
 </main>

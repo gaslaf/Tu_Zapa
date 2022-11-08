@@ -137,149 +137,26 @@
   <article class="products-cnt">
     <h3 class="t-a-center title">Nuestros productos</h3>
 
+  <% productosFiltrados.forEach(producto=> { %>
 <div class="product">
-      <div class="img-product">
-        <a href="">
-          <img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-          <img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
 
-            <p class="precio">$ 1.599</p>
+      <div class="img-product">
+        <a href="/products/detail/<%= producto.id %>">
+          <img class="img-prdt img-uno" src="/images/zapas/<%= producto.imagenUno %> " alt="">
+          <img class="img-prdt img-dos" src="/images/zapas/<%= producto.imagenDos %> " alt="">
+
+            <p class="precio">$<%= producto.precio %> </p>
           <img class="img-logo" src="/images/logos/adidas.png" alt="">
         </a>
         </div>
 
       <div class="info-cnt">
-        <p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-        <button class="button">ver mas</button>
+        <p class="nombre-prdt t-a-center"><%= producto.marca %> <%= producto.nombre  %> </p>
+        <a href="/products/detail/<%= producto.id %>"><button class="button">ver mas</button></a>
       </div>
-      
+     
 </div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
-<div class="product">
-<div class="img-product">
-<a href="">
-<img class="img-prdt img-uno" src="/images/zapas/AD_GW4113-1.jpg" alt="">
-<img class="img-prdt img-dos" src="/images/zapas/AD_GW4113-2.jpg" alt="">
-
-  <p class="precio">$ 1.599</p>
-
-<img class="img-logo" src="/images/logos/adidas.png" alt="">
-</a>
-</div>
-
-<div class="info-cnt">
-<p class="nombre-prdt t-a-center">Adidas Go Walk</p>
-<button class="button">ver mas</button>
-</div>
-
-</div>
+ <% }) %>
 <button class="button-todo t-a-center">ver todo</button>
   </article>
 </section>

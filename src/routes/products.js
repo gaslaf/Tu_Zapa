@@ -4,5 +4,5 @@ const router = express.Router();
 const {detail} = require('../controllers/productsController');
 
 router.get('/detail',detail);
-
+router.get('/detail/:id',detail)
 module.exports = router;
