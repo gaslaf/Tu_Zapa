@@ -1,0 +1,82 @@
+.all{
+    position: relative;
+    font-family: var(--card-font);
+}
+.all .burger{
+    display: none;
+}
+.all .menu-stn{
+    position: absolute;
+    z-index: 1;
+}.all .menu-stn .menu-asd{
+    transition: all 500ms ease;
+	opacity: 0;
+	visibility: hidden;
+    background: var(--color-four);
+    color: white;
+    font-family: var(--tercero-font);
+    padding: 10px;
+    border: 5px solid;
+    transform: translateX(-100%);
+}
+
+.all .menu-stn  #lista:checked ~ .menu-asd{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0%);
+}
+.all .menu-stn .menu-asd .form-cnt{
+    transition: all 500ms ease;
+}
+#lista:checked ~ .all .menu-stn .menu-asd {
+    transform: translateX(0%);
+}
+.all .menu-stn .menu-asd .burger{
+   /* display: none;*/
+}
+
+.all .menu-stn .menu-asd .burger-search{
+    color: black;
+}
+.all .menu-stn .menu-asd .form-search{
+    display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+
+
+
+.all .menu-stn .menu-asd .form-search .search-otn{
+    padding: 5px;
+}
+
+
+.all .menu-stn .menu-asd .form-search .check-menu{
+    display: flex;
+justify-content: space-between;
+width: 100%;
+align-items: start;
+margin: 2px 0;
+}
+
+#adidas:checked~.seleccionado,#nike:checked~.seleccionado,#topper:checked~.seleccionado,#under-armour:checked~.seleccionado,#converse:checked~.seleccionado,#fila:checked~.seleccionado,#reebok:checked~.seleccionado,#puma:checked~.seleccionado,#lotto:checked~.seleccionado,#ninios:checked~.seleccionado,#mujer:checked~.seleccionado,#hombre:checked~.seleccionado,
+#maxVeinte:checked~.seleccionado,#maxTreinta:checked~.seleccionado,#maxCincuenta:checked~.seleccionado,#maxSetenta:checked~.seleccionado,#cinco:checked~.seleccionado,
+#diez:checked~.seleccionado,#quince:checked~.seleccionado,#veinte:checked~.seleccionado,#veinticinco:checked~.seleccionado,#treinta:checked~.seleccionado,#cincuenta:checked~.seleccionado,#velcro:checked~.seleccionado,#cordones:checked~.seleccionado{
+    background: var(--color-one);
+    color: var(--color-four);
+    transition: all 500ms ease;
+}
+.label-pre{
+    border: 1px solid gray;
+    padding: 3px;
+    border-radius: 5px;
+}
+.select{
+    border: 0;
+    font-size: 1rem;
+    background: var(--color-one);
+    border-radius: 5px;
+    padding: 5px;
+    text-transform: uppercase;
+}

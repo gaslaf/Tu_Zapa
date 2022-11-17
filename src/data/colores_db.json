@@ -1,3 +1,27 @@
 [
-    "rojo","blanco","negro","verde","azul","marron"
+    
+    {
+        "color": "negro"
+    },
+    {
+        "color": "verde"
+    },
+    {
+        "color": "azul"
+    },
+    {
+        "color": "blanco"
+    },
+    {
+        "color": "rojo"
+    },
+    {
+        "color": "marron"
+    },
+    {
+        "color": "gris"
+    },
+    {
+        "color": "rosa"
+    }
 ]

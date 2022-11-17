@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+<%- include('./partials/head')  %> 
+  <body>
+    <%- include('./partials/header')  %> 
+    <main class="all">
+        <section class="menu-stn"> 
+            <input class="burger" type="checkbox" id="lista">
+            <label class="burger-search" for="lista">☰</label>
+            <aside class="menu-asd"> 
+                <form class="form-search" action="/products/all">
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Marca</h2>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="adidas" value="adidas" type="checkbox">
+                                <label class="seleccionado label-pre" for="adidas">Adidas</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="nike" value="nike" type="checkbox">
+                                <label class="seleccionado label-pre" for="nike">Nike</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="topper" value="topper" type="checkbox">
+                                <label class="seleccionado label-pre" for="topper">Topper</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="under-armour" value="under armour" type="checkbox">
+                                <label class="seleccionado label-pre" for="under-armour">Under Armour</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="converse" value="converse" type="checkbox">
+                                <label class="seleccionado label-pre" for="converse">Converse</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="fila" value="fila" type="checkbox">
+                                <label class="seleccionado label-pre" for="fila">Fila</label>
+                            </div>
+                           <div class="check-menu">
+                            <input class="ocultar" name="marca" id="reebok" value="reebok" type="checkbox">
+                             <label class="seleccionado label-pre" for="reebok">Reebok</label>
+                           </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="puma" value="puma" type="checkbox">
+                                <label class="seleccionado label-pre" for="puma">Puma</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" name="marca" id="lotto" value="lotto" type="checkbox">
+                                <label class="seleccionado label-pre" for="lotto">Lotto</label>
+                            </div>
+                        </div>
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Genero</h2>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="genero" id="mujer" value="mujer">
+                                <label class="seleccionado label-pre" for="mujer">Mujer</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="genero" id="hombre" value="hombre">
+                                <label class="seleccionado label-pre" for="hombre">Hombre</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="genero" id="ninios" value="ninios">
+                                <label class="seleccionado label-pre" for="ninios">Niños</label>
+                            </div>
+                        </div>
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Precio</h2>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="precio" value="20000" id="maxVeinte">
+                                <label class="seleccionado label-pre" for="maxVeinte">Hasta $20.000</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="precio" value="30000" id="maxTreinta">
+                                <label class="seleccionado label-pre" for="maxTreinta">Hasta $30.000</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="precio" value="50000" id="maxCincuenta">
+                                <label class="seleccionado label-pre" for="maxCincuenta">Hasta $50.000</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" name="precio" value="70000" id="maxSetenta">
+                                <label class="seleccionado label-pre" for="maxSetenta">Hasta $70.000</label>
+                            </div>
+                        </div>
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Descuento</h2>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="5" name="descuento" id="cinco">
+                                <label class="seleccionado label-pre" for="cinco">5%</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="10" name="descuento" id="diez">
+                                <label class="seleccionado label-pre" for="diez">10%</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="15" name="descuento" id="quince">
+                                <label class="seleccionado label-pre" for="quince">15%</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="20" name="descuento" id="veinte">
+                                <label class="seleccionado label-pre" for="veinte">20%</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="25" name="descuento" id="veinticinco">
+                                <label class="seleccionado label-pre" for="veinticinco">25%</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="30" name="descuento" id="treinta">
+                                <label class="seleccionado label-pre" for="treinta">30%</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="radio" value="50" name="descuento" id="cincuenta">
+                                <label class="seleccionado label-pre" for="cincuenta">50%</label>
+                            </div>
+                        </div>
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Ajuste</h2>
+                            <div class="check-menu">
+                                <input class="ocultar" type="checkbox" value="cordones" name="ajuste" id="cordones">
+                                <label class="seleccionado label-pre" for="cordones">Cordones</label>
+                            </div>
+                            <div class="check-menu">
+                                <input class="ocultar" type="checkbox" value="velcro" name="ajuste" id="velcro">
+                                <label class="seleccionado label-pre" for="velcro">Velcro</label>
+                            </div>
+                        </div>
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Color</h2>
+                            <div class="check-menu">
+                                <select class="t-a-center select" name="color" id="colores">
+                                    <option value="negro">negro</option>
+                                    <option value="blanco">blanco</option>
+                                    <option value="rojo">rojo</option>
+                                    <option value="azul">azul</option>
+                                    <option value="rosa">rosa</option>
+                                    <option value="marron">marron</option>
+                                    <option value="verde">verde</option>
+                                    <option value="gris">gris</option>
+                                
+                                </select>
+                            </div>
+                            
+                        </div>
+                        <div class="search-otn">
+                            <h2 class="t-a-center">Talle</h2>
+                            <div class="check-menu">
+                                <select class="t-a-center select" name="talle" id="talle">
+                                    <option value="15">15</option>
+                                    <option value="39">39</option>
+                                    <option value="17">17</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="check-menu">
+                            <button type="submit">Filtrar</button>
+                        </div>
+                    </form>
+                
+            </aside>
+        </section>
+
+            <section class="products">
+                <article class="products-cnt">
+                  <h3 class="t-a-center title">Nuestros productos</h3>
+
+                    
+                  
+                   
+              <% acumulador.forEach(producto => { %>
+                    <div class="product">
+
+                    <div class="img-product">
+                      <a href="/products/detail/<%= producto.id %>">
+                        <img class="img-prdt img-uno" src="/images/zapas/<%= producto.imagenUno %> " alt="">
+                        <img class="img-prdt img-dos" src="/images/zapas/<%= producto.imagenDos %> " alt="">
+              
+                          <p class="precio">$<%= producto.precio %> </p>
+                        <img class="img-logo" src="/images/logos/adidas.png" alt="">
+                      </a>
+                      </div>
+              
+                    <div class="info-cnt">
+                      <p class="nombre-prdt t-a-center"><%= producto.marca %> <%= producto.nombre  %> </p>
+                      <a href="/products/detail/<%= producto.id %>"><button class="button">ver mas</button></a>
+                    </div>
+                   
+              </div>
+              <% }) %>
+                </article>
+        </section>
+    </main>
+    <%- include('./partials/footer')  %>
+  </body>
+</html>

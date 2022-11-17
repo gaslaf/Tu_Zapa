@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include('./partials/head') %> 
+
+<body>
+    <%- include('./partials/header') %>
+<main class="register">
+  <h2 class="t-a-center title">Agregar un producto</h2>
+
+  <form class="formulario" method="POST" action="/products/edit/<%= producto.id  %>?_method=PUT ">
+
+
+<div class="form-cnt">
+          <label for="marca">marca</i></label>
+          <input class="input" type="text" name="marca" id="marca" value="<%- producto.marca %> ">
+  
+</div>
+
+<div class="form-cnt">
+  <label for="nombre">modelo</i></label>
+  <input class="input" type="text" name="nombre" id="nombre" value="<%- producto.nombre %> ">
+
+</div>
+
+<div class="form-cnt">
+  <label for="precio">precio</i></label>
+  <input class="input" type="number" name="precio" id="precio" value=<%= producto.precio %>>
+
+</div>
+
+
+<div class="form-cnt">
+  <label for="talle">talle</i></label>
+  <input class="input" type="text" name="talle" id="talle" value="<%= producto.talle %> ">
+
+</div>
+
+</div>
+<div class="form-cnt">
+  <label for="color">color</i></label>
+
+  <select class="input" name="color" id="color">
+    <% colores.forEach(color => { %>
+        <option value="<%- producto.color%> "><%= producto.color=== color.color.toLowerCase() ? 'selected' : null %> <%= color.color.toLowerCase() %> </option>
+    <% }) %>
+      
+  </select>
+
+</div>
+<div class="form-cnt">
+  <label for="genero">genero</i></label>
+  <select class="input" name="genero" id="genero">
+    <option value="hombre">hombre</option>
+    <option value="mujer">mujer</option>
+    <option value="ninios">ninios</option>
+  </select>
+
+</div>
+<div class="form-cnt">
+  <label for="ajuste">ajuste</i></label>
+  <select class="input" name="ajuste" id="ajuste">
+    <option value="velcro">velcro</option>
+    <option value="cordones">cordones</option>
+  </select>
+
+  <div class="form-cnt">
+    <label for="origen">origen</i></label>
+    <select class="input" name="origen" id="origen">
+      <option value="nacional">nacional</option>
+      <option value="importado">importado</option>
+    </select>
+
+
+
+<div class="boton-log t-a-center">
+  <button type="submit">Entrar</button>
+</div>
+  </form>
+    
+</main>
+<%- include('./partials/footer') %>  
+
+</body>
+</html>

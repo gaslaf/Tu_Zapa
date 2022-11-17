@@ -45,7 +45,7 @@
     border-radius: 5px;
     align-self: center;
   }
-.header input {
+.header .burger-nav {
     width: 90%;
     height: 20px;
     outline: none;
@@ -84,10 +84,10 @@
 .header nav label{
     text-align: center;
 }
-.header nav input{
+.header nav .burger-nav{
     display: none;
 }
-.header nav input:checked ~ ul{
+.header nav .burger-nav:checked ~ .lista-nav{
     display:none;
     background: black;
 }
@@ -118,7 +118,7 @@
     .header form{
         width: 50%;
     }
-    .header input{
+    .header .burger-nav{
         margin: 0;
     }
 }
