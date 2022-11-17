@@ -76,7 +76,11 @@
   <button type="submit">Entrar</button>
 </div>
   </form>
-    
+  <div class="botton-log t-a-center">
+    <form action="/products/delete/<%= producto.id %>?_method=DELETE " method="POST">
+    <button class="btn btn-sm btn-danger" type="submit">BORRAR</button>
+    </form>
+</div>
 </main>
 <%- include('./partials/footer') %>  
 

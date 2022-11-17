@@ -96,6 +96,15 @@ module.exports = {
             return res.redirect('/')
            } })
         
+    },
+    destroy : (req,res) => {
+        let producto = productos.filter(producto => producto.id != +req.params.id);
+        
+        fs.writeFileSync(path.join(__dirname,'..','data','zapatillas_db.json'),JSON.stringify(producto,null,2),'utf-8');
+        productos= JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','zapatillas_db.json')),'utf-8')
+        
+        return res.redirect('/')
+        
     }
     
     
