@@ -6,34 +6,34 @@
     <%- include('./partials/header') %>
 <main class="register">
     <h2 class="t-a-center title">Crea Tu Cuenta</h2>
-    <form class="formulario" action="">
+    <form class="formulario" action="" method="POST">
 <div class="form-cnt">
-            <label for="usuario"></i></label>
-            <input class="input" type="text" name="usuario" id="usuario" placeholder="Nombre">
-    
+            <label for="nombre"></i></label>
+            <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre">
+            <span class="text-danger small"><%= locals.errors && errors.nombre ? errors.nombre.msg : null %> </span>
 </div>
 <div class="form-cnt">
-    <label for="usuario"></i></label>
-    <input class="input" type="text" name="usuario" id="usuario" placeholder="Apellido">
+    <label for="apellido"></i></label>
+    <input class="input" type="text" name="apellido" id="apellido" placeholder="Apellido">
 
 </div>
 <div class="form-cnt">
-            <label for="usuario"></i></label>
-            <input class="input" type="email" name="usuario" id="usuario" placeholder="Email">
+            <label for="email"></i></label>
+            <input class="input" type="email" name="email" id="email" placeholder="Email">
     
 </div>
 <div class="form-cnt">
-    <label for="usuario"></i></label>
-    <input class="input" type="email" name="usuario" id="usuario" placeholder="Repetir Email">
+    <label for="remail"></i></label>
+    <input class="input" type="email" name="remail" id="remail" placeholder="Repetir Email">
 
 </div>
 <div class="form-cnt">
-            <label for="contrasena"></label>
-            <input class="input" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+            <label for="pass"></label>
+            <input class="input" type="password" name="pass" id="pass" placeholder="Contraseña">
 </div>
 <div class="form-cnt">
-    <label for="contrasena"></label>
-    <input class="input" type="password" name="contrasena" id="contrasena" placeholder="Repetir Contraseña">
+    <label for="passtwo"></label>
+    <input class="input" type="password" name="passtwo" id="passtwo" placeholder="Repetir Contraseña">
 </div>
 <div class="boton-log t-a-center">
     <button type="submit">Entrar</button>
@@ -41,5 +41,6 @@
     </form>
 </main>
     <%- include('./partials/footer') %>  
+    <%- include('./partials/scripts') %> 
 </body>
 </html>

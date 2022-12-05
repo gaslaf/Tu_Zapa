@@ -27,13 +27,26 @@
   <input class="input" type="number" name="precio" id="precio">
 
 </div>
-
-
 <div class="form-cnt">
   <label for="talle">talle</i></label>
   <input class="input" type="text" name="talle" id="talle">
 
 </div>
+<div class="form-cnt">
+  <label for="descuento">descuento</label>
+  <select class="input" name="descuento" id="descuento">
+    <option value="0">0</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+    <option value="25">25</option>
+    <option value="30">30</option>
+    <option value="50">50</option>
+  </select>
+</div>
+
+
 
 </div>
 <div class="form-cnt">
@@ -41,7 +54,7 @@
 
   <select class="input" name="color" id="color">
     <% colores.forEach(color => { %>
-      <option value="<%- color.color%> "><%- color.color  %> </option>
+      <option value="<%- color.color%>"><%- color.color  %> </option>
     <% }) %>
 
   </select>
@@ -69,7 +82,13 @@
       <option value="nacional">nacional</option>
       <option value="importado">importado</option>
     </select>
-
+    <div class="form-cnt">
+      <label for="descripcion">descripcion</label>
+      <textarea name="descripcion" id="descripcion" cols="30" rows="5">
+        
+      </textarea>
+    </div>
+    
 <div class="form-cnt">
   <label for="imagenes">Imagen 1</label>
   <input type="file" name="imagenes" id="imagenes" multiple accept="image/*">

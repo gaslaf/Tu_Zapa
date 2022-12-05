@@ -41,19 +41,28 @@ module.exports = {
             acumulador
         })
     },
+    add : (req,res) => {
+        return res.render('productAdd',{
+            title : 'Agregar un producto',
+            productos,
+            colores
+        })
+    },
     create : (req,res) => {
-        const {marca,nombre,precio,talle,ajuste,origen,color,genero} = req.body;
+        const {marca,nombre,precio,talle,ajuste,origen,color,genero,descuento,descripcion} = req.body;
         //return res.send(req.body)
         let producto = {
             id : productos[productos.length -1].id +1,
             marca : marca,
             nombre : nombre,
             precio : +precio,
-            talle : (talle.split),
+            talle : talle.split(','),
             color : color,
             genero : genero,
             ajuste : ajuste,
             origen : origen,
+            descuento : +descuento,
+            descripcion : descripcion,
             imagenUno : req.files ? req.files[0].filename : 'default-image.png',
             imagenDos : req.files ? req.files[1].filename : 'default-image.png'
         }
@@ -61,11 +70,8 @@ module.exports = {
         
         fs.writeFileSync(path.join(__dirname,'..','data','zapatillas_db.json'),JSON.stringify(productos,null,2),'utf-8')
         productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','zapatillas_db.json')),'utf-8')
-        return res.render('productAdd',{
-            title : 'Crear un producto.',
-            productos,
-            colores
-        })},
+        return res.redirect('/')
+    },
     edit : (req,res) => {
 
         let producto = productos.find(producto =>  producto.id === +req.params.id )
@@ -78,7 +84,7 @@ module.exports = {
 
     },
     update : (req,res) => { 
-        const {marca,nombre,precio,talle,ajuste,origen,color,genero} = req.body;
+        const {marca,nombre,precio,talle,ajuste,origen,color,genero,descuento,descripcion} = req.body;
        productos.forEach(producto => {
             if(producto.id == +req.params.id){
                 producto.marca = marca,
@@ -88,7 +94,9 @@ module.exports = {
                 producto.talle = talle.split(','),
                 producto.ajuste = ajuste,
                 producto.origen = origen,
-                producto.genero = genero
+                producto.genero = genero,
+                producto.descuento = descuento,
+                producto.descripcion = descripcion
             
             productos.push(req.body)
             fs.writeFileSync(path.join(__dirname,'..','data','zapatillas_db.json'),JSON.stringify(productos,null,2),'utf-8')

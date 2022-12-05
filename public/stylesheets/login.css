@@ -16,6 +16,8 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 5px;
+    width: 100%;
+    flex-direction: column;
 } 
 .login .formulario .form-cnt .input{
     color: var(--color-four);

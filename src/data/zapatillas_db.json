@@ -1860,5 +1860,24 @@
     "descripcion": "Las Zapatillas Lotto Runner Plus 95II son un calzado urbano pensado para que acompañe en todas las actividades que los más chicos tienen en el colegio o en la plaza. Confeccionadas en materiales que aportan un look en capas y con suela de goma para mayor adherencia, su estilo les permite combinarlas con los jeans o joggers favoritos.",
     "imagenUno": "LO_N2156706WO-1.jpg",
     "imagenDos": "LO_N2156706WO-2.jpg"
+  },
+  {
+    "id": 81,
+    "marca": "Fila",
+    "nombre": "Racer T2",
+    "precio": 50000,
+    "talle": [
+      "45",
+      "44",
+      "46"
+    ],
+    "color": "rojo",
+    "genero": "hombre",
+    "ajuste": "cordones",
+    "origen": "importado",
+    "descuento": 15,
+    "descripcion": "Las Zapatillas Fila Racer T2 aseguran un gran confort para tus pies a la hora de entrenar o competir. La tecnología Speedtech facilita la propulsión y amortiguación. La suela está compuesta en caucho para pisadas más adherentes y seguras. La entresuela de EVA se amolda a la forma de tu pie para una pisada más cómoda. La parte superior está confeccionada con malla con costuras reforzadas combinando suavidad y circulación de aire interna para una excelente transpirabilidad del pie. La parte superior también tiene una cinta de ajuste para atar, ubicada en el lateral del zapato, y una lengüeta con puntadas de goma para una mayor flexibilidad. La Zapatilla Fila Racer T2 tiene dos cordones: uno con sistema LOCKER y otro convencional. Su diseño presenta puntos reflectivos en todo el producto, entregándote seguridad en los momentos de poca luz.",
+    "imagenUno": "img-zapa-1668729036946.jpg",
+    "imagenDos": "img-zapa-1668729036957.jpg"
   }
 ]
