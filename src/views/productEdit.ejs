@@ -12,27 +12,42 @@
 
 <div class="form-cnt">
           <label for="marca">marca</i></label>
-          <input class="input" type="text" name="marca" id="marca" value="<%- producto.marca %> ">
-  
+          <input class="input" type="text" name="marca" id="marca" value="<%- producto.marca ? producto.marca : locals.old && old.marca ? old.marca : null  %>">
+          <span class="text-danger small"><%= locals.errors && errors.marca ? errors.marca.msg : null  %> </span>
 </div>
 
 <div class="form-cnt">
   <label for="nombre">modelo</i></label>
-  <input class="input" type="text" name="nombre" id="nombre" value="<%- producto.nombre %> ">
-
+  <input class="input" type="text" name="nombre" id="nombre" value="<%- producto.nombre ? producto.nombre : locals.old && old.nombre ? old.nombre : null  %>">
+  <span class="text-danger small"><%= locals.errors && errors.nombre ? errors.nombre.msg : null  %> </span>
 </div>
 
 <div class="form-cnt">
   <label for="precio">precio</i></label>
-  <input class="input" type="number" name="precio" id="precio" value=<%= producto.precio %>>
-
+  <input class="input" type="number" name="precio" id="precio" value=<%- producto.precio ? producto.precio : locals.old && old.precio ? old.precio : null  %>>
+  <span class="text-danger small"><%= locals.errors && errors.precio ? errors.precio.msg : null  %> </span>
 </div>
 
 
 <div class="form-cnt">
   <label for="talle">talle</i></label>
-  <input class="input" type="text" name="talle" id="talle" value="<%= producto.talle %> ">
+  <input class="input" type="text" name="talle" id="talle" value="<%- producto.talle ? producto.talle : locals.old && old.talle ? old.talle : null  %>">
+  <span class="text-danger small"><%= locals.errors && errors.talle ? errors.talle.msg : null  %> </span>
+</div>
 
+<div class="form-cnt">
+  <select class="input" name="descuento" id="descuento">
+    <option value="" selected hidden>Descuento</option>
+    <option value="0" <%= locals.old && old.descuento === "0" ? 'selected' : producto.descuento === 0 && "0" ? 'selected' : null %>>0</option>
+    <option value="5" <%= locals.old && old.descuento === "5" ? 'selected' : producto.descuento === 5 && "5" ? 'selected' : null %>>5</option>
+    <option value="10" <%= locals.old && old.descuento === "10" ? 'selected' : producto.descuento === 10 && "10" ? 'selected' : null %>>10</option>
+    <option value="15" <%= locals.old && old.descuento === "15" ? 'selected' : producto.descuento === 15 && "15" ? 'selected' : null %>>20</option>
+    <option value="20" <%= locals.old && old.descuento === "20" ? 'selected' : producto.descuento === 20 && "20" ? 'selected' : null %>>15</option>
+    <option value="25" <%= locals.old && old.descuento === "25" ? 'selected' : producto.descuento === 25 && "25" ? 'selected' : null %>>25</option>
+    <option value="30" <%= locals.old && old.descuento === "30" ? 'selected' : producto.descuento === 30 && "30" ? 'selected' : null %>>30</option>
+    <option value="50" <%= locals.old && old.descuento === "50" ? 'selected' : producto.descuento === 50 && "50" ? 'selected' : null %>>50</option>
+  </select>
+  <span class="text-danger small"><%= locals.errors && errors.descuento ? errors.descuento.msg : null  %>  </span>
 </div>
 
 </div>
@@ -41,7 +56,7 @@
 
   <select class="input" name="color" id="color">
     <% colores.forEach(color => { %>
-        <option value="<%- producto.color%> "><%= producto.color=== color.color.toLowerCase() ? 'selected' : null %> <%= color.color.toLowerCase() %> </option>
+        <option value="<%- producto.color%>" <%= producto.color=== color.color.toLowerCase() ? 'selected' : locals.old && old.color === color.color ? old.color : null %> <%= color.color.toLowerCase()%> > <%= color.color  %> %> </option>
     <% }) %>
       
   </select>
@@ -50,30 +65,34 @@
 <div class="form-cnt">
   <label for="genero">genero</i></label>
   <select class="input" name="genero" id="genero">
-    <option value="hombre">hombre</option>
-    <option value="mujer">mujer</option>
-    <option value="ninios">ninios</option>
+    <option value="hombre" <%= locals.old && old.genero === "hombre" ? 'selected' : producto.genero === "hombre" ? 'selected' : null %>>hombre</option>
+    <option value="mujer" <%= locals.old && old.genero === "mujer" ? 'selected' : producto.genero === "mujer" ? 'selected' : null %>>mujer</option>
+    <option value="ninios" <%= locals.old && old.genero === "ninios" ? 'selected' : producto.genero === "ninios" ? 'selected' : null %>>ninios</option>
   </select>
 
 </div>
 <div class="form-cnt">
   <label for="ajuste">ajuste</i></label>
   <select class="input" name="ajuste" id="ajuste">
-    <option value="velcro">velcro</option>
-    <option value="cordones">cordones</option>
+    <option value="velcro" <%= locals.old && old.ajuste === "velcro" ? 'selected' : producto.ajuste === "velcro" ? 'selected' : null %>>velcro</option>
+    <option value="cordones" <%= locals.old && old.ajuste === "cordones" ? 'selected' : producto.ajuste === "cordones" ? 'selected' : null %>>cordones</option>
   </select>
 
   <div class="form-cnt">
     <label for="origen">origen</i></label>
     <select class="input" name="origen" id="origen">
-      <option value="nacional">nacional</option>
-      <option value="importado">importado</option>
+      <option value="nacional" <%= locals.old && old.origen === "nacional" ? 'selected' : producto.origen === "nacional" ? 'selected' : null %>>nacional</option>
+      <option value="importado" <%= locals.old && old.origen === "importado" ? 'selected' : producto.origen === "importado" ? 'selected' : null %>>importado</option>
     </select>
-
+    <div class="form-cnt">
+      <label for="descripcion">descripcion</label>
+      <textarea name="descripcion" id="descripcion" cols="30" rows="5"><%- producto.descripcion ? producto.descripcion : locals.old && old.descripcion ? old.descripcion : null  %></textarea>
+      <span class="text-danger small"><%= locals.errors && errors.descripcion ? errors.descripcion.msg : null  %>  </span>
+    </div>
 
 
 <div class="boton-log t-a-center">
-  <button type="submit">Entrar</button>
+  <button type="submit">EDITAR</button>
 </div>
   </form>
   <div class="botton-log t-a-center">

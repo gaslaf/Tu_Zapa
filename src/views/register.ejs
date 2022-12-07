@@ -15,25 +15,27 @@
 <div class="form-cnt">
     <label for="apellido"></i></label>
     <input class="input" type="text" name="apellido" id="apellido" placeholder="Apellido">
-
+    <span class="text-danger small"><%= locals.errors && errors.apellido ? errors.apellido.msg : null %> </span>
 </div>
 <div class="form-cnt">
             <label for="email"></i></label>
             <input class="input" type="email" name="email" id="email" placeholder="Email">
-    
+            <span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
 </div>
 <div class="form-cnt">
     <label for="remail"></i></label>
-    <input class="input" type="email" name="remail" id="remail" placeholder="Repetir Email">
-
+    <input class="input" type="email" name="remail" id="remail" placeholder="Repetir Email">           
+    <span class="text-danger small"><%= locals.errors && errors.remail ? errors.remail.msg : null %> </span>
 </div>
 <div class="form-cnt">
             <label for="pass"></label>
             <input class="input" type="password" name="pass" id="pass" placeholder="Contraseña">
+            <span class="text-danger small"><%= locals.errors && errors.pass ? errors.pass.msg : null %> </span>
 </div>
 <div class="form-cnt">
     <label for="passtwo"></label>
     <input class="input" type="password" name="passtwo" id="passtwo" placeholder="Repetir Contraseña">
+    <span class="text-danger small"><%= locals.errors && errors.passtwo ? errors.passtwo.msg : null %> </span>
 </div>
 <div class="boton-log t-a-center">
     <button type="submit">Entrar</button>

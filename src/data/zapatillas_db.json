@@ -90,23 +90,23 @@
     "id": 5,
     "marca": "Nike",
     "nombre": "Air Max Sc",
-    "color": "Negro",
+    "color": "Negro  ",
     "talle": [
-      35,
-      36,
-      37,
-      38,
-      39,
-      40
+      "35",
+      "36",
+      "37",
+      "38",
+      "39",
+      "40 "
     ],
-    "origen": "Importado",
-    "ajuste": "Cordones",
-    "genero": "Hombre",
+    "origen": "nacional",
+    "ajuste": "velcro",
+    "genero": "hombre",
     "precio": 26999,
-    "descuento": 10,
-    "descripcion": "Las zapatillas Nike Air Max Sc incorporan una amortiguación suave para combinar con cualquier outfit y brindarte un ajuste cómodo durante todo el día. Su diseño inspirado en las famosas Nike Air de los 90's y el estilo propio de la marca hacen de ella un calzado que debes tener entre tus preferidos. Combinalas con lo que quieras, ese no es su problema, sino su ventaja.",
-    "imagenUno": "NI_CU9453-002-1.jpg",
-    "imagenDos": "NI_CU9453-002-2.jpg"
+    "imagenUno": "NI_CW4554-001-1.jpg",
+    "imagenDos": "NI_CW4554-001-2.jpg",
+    "descuento": "5",
+    "descripcion": "Para vos que te gusta lo clásico de la marca, las zapatillas Nike Air Max Sc son la nueva generación del ícono. Diseñada con líneas impecables, versátiles y atemporales, mantienen la misma suela icónica, revestimientos cosidos y detalles clásicos que iniciaron la revolución. Su cámara de aire visible te da un estilo característico de Nike. No es una nueva versión, es un recordatorio.\r\n\r\n"
   },
   {
     "id": 6,
