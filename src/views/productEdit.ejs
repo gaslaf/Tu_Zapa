@@ -56,9 +56,8 @@
 
   <select class="input" name="color" id="color">
     <% colores.forEach(color => { %>
-        <option value="<%- producto.color%>" <%= producto.color=== color.color.toLowerCase() ? 'selected' : locals.old && old.color === color.color ? old.color : null %> <%= color.color.toLowerCase()%> > <%= color.color  %> %> </option>
+        <option value="<%=color.color%>" <%= producto.color.toLowerCase()=== color.color.toLowerCase() ? 'selected' : locals.old && old.color === color.color ? old.color : null %> <%= color.color.toLowerCase()%> > <%= color.color  %> %> </option>
     <% }) %>
-      
   </select>
 
 </div>

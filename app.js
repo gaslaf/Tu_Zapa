@@ -1,9 +1,12 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
+var session = require('express-session')
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+
+const localUserCheck = require('./src/middlewares/localUserCheck')
 const methodOverride = require('method-override');
 
 var app = express();
@@ -11,6 +14,17 @@ var app = express();
 /**manejo de formularios */
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+/*manejo de sesiones*/
+app.use(session({
+  secret: "Bienvenido a la página.",
+  resave: false,
+  saveUninitialized: true 
+}));
+
+
+//envio los datos de sesion
+app.use(localUserCheck);
 
 /* config métodos PUT y DELETE */
 

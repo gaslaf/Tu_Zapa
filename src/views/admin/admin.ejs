@@ -1,0 +1,41 @@
+<%- include('../partials/head') %> 
+<%- include('./partials/header')  %> 
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id </th>
+        <th scope="col">Marca</th>
+        <th scope="col">Modelo</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Color</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% productos.forEach((producto,index) => { %>
+       
+      
+      <tr>
+        <th scope="row"><%= index + 1  %> </th>
+        <td><%= producto.marca  %> </td>
+        <td><%= producto.nombre  %></td>
+        <td><%= producto.precio  %> </td>
+        <td><%= producto.color  %> </td>
+        <td class="d-flex justify-content-around">
+                            <a class="btn btn-sm btn-success"
+                            href="/products/edit/<%= producto.id %> "><i class="fas fa-edit"></i></a>
+                        <div>
+                            <form
+                                action="/products/delete/<%= producto.id %>?_method=DELETE"
+                                method="POST">
+                                <button class="btn btn-sm btn-danger"
+                                    type='submit'><i class="fas fa-trash-alt"></i></button>
+                            </form>
+                        </div>
+                        </td>
+      </tr>
+     <% }) %>
+    </tbody>
+  </table>
+  <%- include('../partials/scripts') %> 
+
+

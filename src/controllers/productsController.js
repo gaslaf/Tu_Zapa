@@ -100,8 +100,7 @@ module.exports = {
     update : (req,res) => { 
         let errors = validationResult(req);
         let producto = productos.find(producto =>  producto.id === +req.params.id )
-
-        //return res.send(errors.mapped())
+        
         const {marca,nombre,precio,talle,ajuste,origen,color,genero,descuento,descripcion} = req.body;
         if(errors.isEmpty()){
             productos.forEach(producto => {
@@ -109,7 +108,7 @@ module.exports = {
                     producto.marca = marca.trim(),
                     producto.nombre = nombre.trim(),
                     producto.precio = +precio,
-                    producto.color = color.trim(),
+                    producto.color = color,
                     producto.talle = talle.split(','),
                     producto.ajuste = ajuste,
                     producto.origen = origen,

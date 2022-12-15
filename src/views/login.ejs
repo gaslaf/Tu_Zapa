@@ -6,16 +6,17 @@
     <%- include('./partials/header') %>
 <main class="login">
     <h2 class="t-a-center title">Inicia Sesión</h2>
-    <form class="formulario" action="">
+    <form class="formulario" action="" method="POST">
 <div class="form-cnt">
-            <label for="usuario"></i></label>
-            <input class="input" type="text" name="usuario" id="usuario" placeholder="Usuario">
+            <label for="email"></i></label>
+            <input class="input" type="text" name="email" id="email" placeholder="Usuario">
     
 </div>
 <div class="form-cnt">
-            <label for="contrasena"></label>
-            <input class="input" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
-</div>
+            <label for="pass"></label>
+            <input class="input" type="password" name="pass" id="pass" placeholder="Contraseña">
+</div>  
+<span class="text-danger small"><%= locals.errors && errors.email ? errors.email.msg : null %> </span>
 <div class="boton-log">
     <button type="submit">Entrar</button>
 </div>

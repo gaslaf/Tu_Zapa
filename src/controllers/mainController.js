@@ -25,6 +25,11 @@ module.exports = {
                 busqueda : req.query.busqueda
             })
         }
-        }
+        },
+    admin: (req,res) => {
+        return res.render('admin/admin',{
+            title: 'Admin',
+            productos
+        })
     }
-    
+}

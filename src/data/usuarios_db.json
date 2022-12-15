@@ -4,15 +4,7 @@
     "nombre": "Gaston",
     "apellido": "Lafuente",
     "email": "lafuente.gf@gmail.com",
-    "pass": "123456",
+    "pass": "$2a$10$2XT3uCQ1HE8DMRMuNKxOFukvv03cho.oRVZve2j/jdlMB3MnM/0lu",
     "rol": "admin"
-  },
-  {
-    "id": 2,
-    "nombre": "Gaston",
-    "apellido": "Lafuente",
-    "email": "gonzalezcatriel149@gmail.com",
-    "pass": "121212",
-    "rol": "user"
   }
 ]

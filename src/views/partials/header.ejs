@@ -2,8 +2,14 @@
 <div class="nav-top">
         <div class="header-top">
             <div>
-                <a href=""><i class="fa-solid fa-user"></i></a>
-                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <% if (locals.userLogin) { %>
+                    <a href="/admin"><%= locals.userLogin.nombre  %><i class="fa-solid fa-user"> </i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="users/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    <% } else{ %>
+                        <a href="/users/login"><i class="fa-solid fa-user"></i></a>
+                        <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <% } %> 
             </div>
         </div>
     

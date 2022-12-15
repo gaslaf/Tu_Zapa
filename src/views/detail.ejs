@@ -86,33 +86,46 @@
         </div>
     </article>
    </section>
-   <section class="rela-stn">
-    <article class="rela-art">
-    <h2 class="title t-a-center">Relacionados <%= producto.marca  %>  </h2>
 
-    <% aleatorios(nuevoArray(producto.marca),4).forEach(aleatorio => { %>
-<div class="product">
+
+   <div class="glider-contain">
+    <h2 class="title t-a-center">Relacionados <%= producto.marca  %>  </h2>     
+
+    <section class="rela-stn">
+        <article class="rela-art glider">   
+            <% productos.forEach(productoF => { %>
+            <% if (productoF.marca === producto.marca) { %>
+                <div class="product">
 
    
   
-    <div class="img-product">
-      <a href="">
-        <img class="img-prdt img-uno" src="/images/zapas/<%= aleatorio.imagenUno  %> " alt="">
-        <img class="img-prdt img-dos" src="/images/zapas/<%= aleatorio.imagenDos  %>" alt="">
+                    <div class="img-product">
+                      <a href="">
+                        <img class="img-prdt img-uno" src="/images/zapas/<%= productoF.imagenUno  %> " alt="">
+                        <img class="img-prdt img-dos" src="/images/zapas/<%= productoF.imagenDos  %>" alt="">
+                  
+                          <p class="precio">$ <%= productoF.precio %> </p>
+                        <img class="img-logo" src="/images/logos/adidas.png" alt="">
+                      </a>
+                      </div>
+                      
+                  <div class="info-cnt">
+                    <p class="nombre-prdt t-a-center"><%= productoF.marca %> <%= productoF.nombre  %> </p>
+                    <a href="/products/detail/<%= productoF.id %> "><button class="button">ver mas</button></a>
+                  </div>
+                    </div>
+            <% } %>
+        <% }) %>
+    </div>
   
-          <p class="precio">$ <%= aleatorio.precio %> </p>
-        <img class="img-logo" src="/images/logos/adidas.png" alt="">
-      </a>
-      </div>
-      
-  <div class="info-cnt">
-    <p class="nombre-prdt t-a-center"><%= aleatorio.marca %> <%= aleatorio.nombre  %> </p>
-    <a href="/products/detail/<%= aleatorio.id %> "><button class="button">ver mas</button></a>
+    <button aria-label="Previous" class="glider-prev">«</button>
+    <button aria-label="Next" class="glider-next">»</button>
+    <div role="tablist" class="dots"></div>
   </div>
-    </div><% }) %>
-    
-    </article>
-   </section>
+</article>
+</section>
+
+  
 </main>
     <%- include('./partials/footer') %>  
     <%- include('./partials/scripts') %> 

@@ -1,0 +1,20 @@
+<%- include('./partials/head') %> 
+
+<main class="profile">
+    <div class="profile-cnt">
+        <div>
+            <h4>NOMBRE:</h4>
+            <h3><%= locals.userLogin.nombre  %></h3>
+        </div>
+        <div>
+            <h4>APELLIDO:</h4>
+            <h3><%= locals.userLogin.apellido  %> </h3>
+        </div>        
+        <div>
+            <h4>ROL:</h4>
+            <h3><%= locals.userLogin.rol  %></h3>
+        </div>
+    </div>    
+</main>
+  <%- include('./partials/footer') %>  
+  <%- include('./partials/scripts') %> 
