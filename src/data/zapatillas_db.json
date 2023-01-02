@@ -601,7 +601,7 @@
     "marca": "Reebok",
     "nombre": "Flashfilm 3.0",
     "color": "Negro",
-    "talle": 41,
+    "talle": [41,42,43],
     "origen": "Importado",
     "ajuste": "Cordones",
     "genero": "Mujer",

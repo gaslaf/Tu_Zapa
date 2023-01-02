@@ -60,27 +60,63 @@
 
 
 <section class="marcas">
-  <article class="marcas-cnt">
-   <div class="marcas">
+  <article class="marcas-cnt glider-contain">
+    <div class="marcas logos" id="logos">
+      <div class="marca">
+        <a href="">
+         <img src="/images/logos/adidas.png" class="img-marca" src="" alt=""></a>
+      </div>
+      <div class="marca">
+        <a href=""><img src="/images/logos/converse.png" class="img-marca" src="" alt=""></a>
+      </div>
+      <div class="marca">
+        <a href=""><img src="/images/logos/topper.png" class="img-marca" src="" alt=""></a>
+      </div>
+      <div class="marca">
+       <a href="">
+        <img src="/images/logos/fila.png" class="img-marca" src="" alt=""></a>
+     </div>
      <div class="marca">
        <a href="">
-        <img src="/images/logos/adidas.png" class="img-marca" src="" alt=""></a>
+        <img src="/images/logos/lecoq.webp" class="img-marca" src="" alt=""></a>
      </div>
      <div class="marca">
-       <a href=""><img src="/images/logos/converse.png" class="img-marca" src="" alt=""></a>
+       <a href="">
+        <img src="/images/logos/new-balance.png" class="img-marca" src="" alt=""></a>
      </div>
      <div class="marca">
-       <a href=""><img src="/images/logos/topper.png" class="img-marca" src="" alt=""></a>
+       <a href="">
+        <img src="/images/logos/olympikus.png" class="img-marca" src="" alt=""></a>
      </div>
+     <div class="marca">
+       <a href="">
+        <img src="/images/logos/pony.png" class="img-marca" src="" alt=""></a>
+     </div>
+     <div class="marca">
+      <a href="">
+       <img src="/images/logos/nike.png" class="img-marca" src="" alt=""></a>
     </div>
-    <div class="input-cnt t-a-center">
-      <input type="radio" name="position" class="carrousel" checked>
-      <input type="radio" name="position" class="carrousel">
-      <input type="radio" name="position" class="carrousel">
-      <input type="radio" name="position" class="carrousel">
-  </div>
+     </div>
+ 
   </article>
 </section>
+
+<section class="marcas">
+<div class="glider-contain">
+  <div class="gliderIndex"  style="display:flex;flex-direction:row;margin: auto;">
+    <div><img src="/images/banners/banner-1.webp" alt=""></div>
+    <div><img src="/images/banners/banner-2.jpg" alt=""></div>
+    <div><img src="/images/banners/banner-3.jpg" alt=""></div>
+    <div><img src="/images/banners/banner-4.webp" alt=""></div>
+  </div>
+
+  <button aria-label="Previous" class="glider-prev">«</button>
+  <button aria-label="Next" class="glider-next">»</button>
+  <div role="tablist" class="dots"></div>
+</div>  
+</section>
+
+
 
 <section class="products">
   <article class="products-cnt">
@@ -111,5 +147,7 @@
 </section>
     </main>
     <%- include('./partials/footer')  %>
+    <%- include('./partials/scripts') %> 
+
   </body>
 </html>

@@ -181,7 +181,10 @@
 .index .marcas .marcas-cnt,.all .marcas .marcas-cnt{
     line-height: 0;
 }
-
+.index .marcas .marcas-cnt .marca{
+    display: flex;
+    align-items: center;
+}
 .index .marcas .marcas-cnt .marca .img-marca, .all .marcas .marcas-cnt .marca .img-marca{
     width: 100%;
 }
