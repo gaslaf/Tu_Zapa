@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 const productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','zapatillas_db.json'),'utf-8'));
+const marcas = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','marcas_db.json'),'utf-8'));
 const productosFiltrados = productos.filter(producto => producto.id <= 8)
 const aleatorios = require('../utils/aleatorios');
 const porMarca = require('../utils/porMarca');
@@ -15,7 +16,8 @@ module.exports = {
             aleatorios,
             porMarca,
             porDescuento,
-            mayor
+            mayor,
+            marcas
         })},
     search : (req,res) => {
         if (req.query.busqueda) {

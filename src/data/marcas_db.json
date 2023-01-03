@@ -1,0 +1,34 @@
+[
+    {   "id": 0,
+        "nombre":"adidas.png",
+        "marca": "adidas"
+    },
+    {   "id": 1,
+        "nombre": "converse.png",
+        "marca": "converse"
+    },
+    {   "id" : 2,
+        "nombre": "fila.png",
+        "marca": "fila"
+    },
+    {   "id" : 3,
+        "nombre": "under-armour.png",
+        "marca": "under armour"
+    },
+    {   "id" : 4,
+        "nombre": "nike.png",
+        "marca": "nike"
+    },
+    {   "id" : 5,
+        "nombre": "lotto.png",
+        "marca": "lotto"
+    },
+    {   "id" : 6,
+        "nombre": "puma.png",
+        "marca": "puma"
+    },
+    {   "id" : 7,
+        "nombre": "topper.png",
+        "marca": "topper"
+    }
+]

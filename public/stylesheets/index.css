@@ -170,6 +170,9 @@
 /*********************************/
 /*********************************/
 /*********************************/
+.index .logo-busqueda{
+    display: none;
+}
 .index .marcas,.all .marcas{
     width: 90%;
     margin: auto;
@@ -181,9 +184,13 @@
 .index .marcas .marcas-cnt,.all .marcas .marcas-cnt{
     line-height: 0;
 }
-.index .marcas .marcas-cnt .marca{
+.index .marcas .marcas-cnt .form-marca{
     display: flex;
     align-items: center;
+}
+.index .marcas .marcas-cnt .boton-marca{
+    border: none;
+    background-color: var(--color-one);
 }
 .index .marcas .marcas-cnt .marca .img-marca, .all .marcas .marcas-cnt .marca .img-marca{
     width: 100%;

@@ -1,5 +1,5 @@
 new Glider(document.querySelector('.logos'), {
-    slidesToShow:9,
+    slidesToShow:4,
     slidesToScroll: 1,
     draggable: true,
     dots: '.puntos',

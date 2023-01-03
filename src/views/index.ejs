@@ -62,40 +62,21 @@
 <section class="marcas">
   <article class="marcas-cnt glider-contain">
     <div class="marcas logos" id="logos">
-      <div class="marca">
-        <a href="">
-         <img src="/images/logos/adidas.png" class="img-marca" src="" alt=""></a>
-      </div>
-      <div class="marca">
-        <a href=""><img src="/images/logos/converse.png" class="img-marca" src="" alt=""></a>
-      </div>
-      <div class="marca">
-        <a href=""><img src="/images/logos/topper.png" class="img-marca" src="" alt=""></a>
-      </div>
-      <div class="marca">
-       <a href="">
-        <img src="/images/logos/fila.png" class="img-marca" src="" alt=""></a>
-     </div>
-     <div class="marca">
-       <a href="">
-        <img src="/images/logos/lecoq.webp" class="img-marca" src="" alt=""></a>
-     </div>
-     <div class="marca">
-       <a href="">
-        <img src="/images/logos/new-balance.png" class="img-marca" src="" alt=""></a>
-     </div>
-     <div class="marca">
-       <a href="">
-        <img src="/images/logos/olympikus.png" class="img-marca" src="" alt=""></a>
-     </div>
-     <div class="marca">
-       <a href="">
-        <img src="/images/logos/pony.png" class="img-marca" src="" alt=""></a>
-     </div>
-     <div class="marca">
-      <a href="">
-       <img src="/images/logos/nike.png" class="img-marca" src="" alt=""></a>
-    </div>
+      <% marcas.forEach(marca => { %>
+        
+          
+            <form action="/search" class="form-marca">
+            <input type="text" value="<%= marca.marca%>" name="busqueda" id="" class="logo-busqueda">
+            <div class="marca">
+              <button type="submit" class="boton-marca"><img src="/images/logos/<%= marca.nombre  %> " class="img-marca" src="" alt=""></button>
+            </div>
+            </form>
+
+          
+
+
+
+      <% }) %>
      </div>
  
   </article>
