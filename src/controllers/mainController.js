@@ -21,7 +21,7 @@ module.exports = {
         })},
     search : (req,res) => {
         if (req.query.busqueda) {
-            let resultado = productos.filter(producto => producto.marca.toLowerCase() === req.query.busqueda.toLowerCase())
+            let resultado = productos.filter(producto => producto.marca.toLowerCase() === req.query.busqueda.toLowerCase() || producto.genero.toLowerCase() === req.query.busqueda.toLowerCase())
             return res.render('search',{
                 resultado,
                 busqueda : req.query.busqueda

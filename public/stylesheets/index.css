@@ -188,8 +188,10 @@
     display: flex;
     align-items: center;
 }
-.index .marcas .marcas-cnt .boton-marca{
+.index .boton-marca{
     border: none;
+}
+.index .marcas .marcas-cnt .boton-marca{
     background-color: var(--color-one);
 }
 .index .marcas .marcas-cnt .marca .img-marca, .all .marcas .marcas-cnt .marca .img-marca{

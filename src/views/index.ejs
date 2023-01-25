@@ -8,27 +8,39 @@
       
 <section class="section-cat">
   <article class="cont-cat">
+    <form action="/search" class="form-marca">
+
     <div class="cat-publico">
+        <input type="text" value="hombre" name="busqueda" id="" class="logo-busqueda">
       <a class="font" href="">
         <p class="cat-titulo t-a-center">Hombres</p>      
-        <img class="img-publico" src="/images/zapas/zapa-h.jpg" alt="">
+        <button type="submit" class="boton-marca"><img class="img-publico" src="/images/zapas/zapa-h.jpg" alt=""></button>
       
       </a>
 
     </div>
+  </form>
+  <form action="/search" class="form-marca">
     <div class="cat-publico">
       <a class="font" href="">
-        <p class="cat-titulo t-a-center">Mujeres</p> 
-        <img class="img-publico"  src="/images/zapas/zapa-m.jpg" alt="">
+        <input type="text" value="mujer" name="busqueda" id="" class="logo-busqueda">
+        <p class="cat-titulo t-a-center">Mujeres</p>         
+        <button type="submit" class="boton-marca"><img class="img-publico"  src="/images/zapas/zapa-m.jpg" alt=""></button>
+
         
       </a>
     </div>
+    </form>
+    <form action="/search" class="form-marca">
     <div class="cat-publico">
+      <input type="text" value="niños" name="busqueda" id="" class="logo-busqueda">
       <a class="font" href="">
-        <p class="cat-titulo t-a-center">Niños</p> 
-        <img class="img-publico"  src="/images/zapas/zapa-n.webp" alt="">
+        <p class="cat-titulo t-a-center">Niños</p>
+        <button type="submit" class="boton-marca"><img class="img-publico"  src="/images/zapas/zapa-n.webp" alt=""></button>
+
       </a>
     </div>
+  </form>
   </article>
 </section>
 
@@ -64,7 +76,7 @@
     <div class="marcas logos" id="logos">
       <% marcas.forEach(marca => { %>
         
-          
+
             <form action="/search" class="form-marca">
             <input type="text" value="<%= marca.marca%>" name="busqueda" id="" class="logo-busqueda">
             <div class="marca">

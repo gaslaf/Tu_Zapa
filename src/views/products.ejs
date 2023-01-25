@@ -164,10 +164,9 @@
                 <article class="products-cnt">
                   <h3 class="t-a-center title">Nuestros productos</h3>
 
-                    
-                  
-                   
-              <% acumulador.forEach(producto => { %>
+                <% if (resultado<=0) { %>
+
+                  <% productos.forEach(producto => { %>
                     <div class="product">
 
                     <div class="img-product">
@@ -187,6 +186,35 @@
                    
               </div>
               <% }) %>
+
+                <% } else {%>
+                    <% resultado.forEach(producto => { %>
+                        <div class="product">
+    
+                        <div class="img-product">
+                          <a href="/products/detail/<%= producto.id %>">
+                            <img class="img-prdt img-uno" src="/images/zapas/<%= producto.imagenUno %> " alt="">
+                            <img class="img-prdt img-dos" src="/images/zapas/<%= producto.imagenDos %> " alt="">
+                  
+                              <p class="precio">$<%= producto.precio %> </p>
+                            <img class="img-logo" src="/images/logos/adidas.png" alt="">
+                          </a>
+                          </div>
+                  
+                        <div class="info-cnt">
+                          <p class="nombre-prdt t-a-center"><%= producto.marca %> <%= producto.nombre  %> </p>
+                          <a href="/products/detail/<%= producto.id %>"><button class="button">ver mas</button></a>
+                        </div>
+                       
+                  </div>
+                  <% }) %>
+
+                    
+                <%  } %>
+                 
+
+
+           
                 </article>
         </section>
     </main>

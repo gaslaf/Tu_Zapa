@@ -5,6 +5,9 @@ const descuento = require('../utils/descuento');
 const cuotas = require('../utils/cuotas');
 const aleatorios = require('../utils/aleatorios');
 const porMarca = require('../utils/porMarca');
+const buscador = require('../utils/buscador');
+
+
 const {validationResult} = require('express-validator')
 
 let productos = JSON.parse(fs.readFileSync(path.join(__dirname,'..','data','zapatillas_db.json'),'utf-8'));
@@ -23,22 +26,23 @@ module.exports = {
             porMarca
         })},
     products: (req,res) =>{
-
-        let acumulador = []
-        for (let index = 0; index < (req.query.marca).length; index++) {
-            let resultado = productos.filter(producto => producto.marca.toLowerCase().includes(req.query.marca[index]))
-            acumulador = acumulador.concat(resultado)
-        }
+        let resultado = buscador(req.query.marca)
+        //return res.send(resultado)
+        /*for (let i = 0; i < (queryAr).length; i++){
+            
+        }*/
+       // return res.send(buscador(req.query.marca))
+      //  return res.send(buscador(req.query.marca))
        // &&producto.genero.toLowerCase().includes(busca.genero[index])&&producto.precio <= (+busca.precio)&&producto.descuento <=(+busca.descuento)&&producto.ajuste.toLowerCase() == (busca.ajuste)&& producto.color.toLowerCase() == (busca.color)&&producto.talle == (+busca.talle)
         //let resultado = productos.filter( producto => producto.marca.toLowerCase() == marcas)
        // filtrados = productos.filter(producto => producto.marca.toLowerCase() === marcas)
         return res.render('products',{
-            title : 'Resultados de la busqueda',
+            title : 'Todos los productos',
             productos,
             descuento,
             cuotas,
             porMarca,
-            acumulador
+            resultado
         })
     },
     add : (req,res) => {
